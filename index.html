@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Ruchika Sandolkar | Salesforce Marketing Cloud Architect</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Salesforce Marketing Cloud Architect specializing in lifecycle automation, CRM architecture, and data-driven marketing systems.">
+
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+<nav>
+    <div class="logo">Ruchika Sandolkar</div>
+    <div class="nav-links">
+        <a href="#about">About</a>
+        <a href="#experience">Experience</a>
+        <a href="#projects">Projects</a>
+        <a href="#skills">Skills</a>
+        <a href="#contact">Contact</a>
+    </div>
+</nav>
+
+<header>
+    <div class="hero-content">
+        <h1>Salesforce Marketing Cloud Architect</h1>
+        <p>Designing Scalable CRM Ecosystems & Lifecycle Automation Frameworks</p>
+        <a class="btn" href="assets/resume.pdf" download>Download Resume</a>
+    </div>
+</header>
+
+<section id="about" class="fade-in">
+    <div class="about-container">
+        <img src="assets/profile.jpg" alt="Ruchika Sandolkar">
+        <div>
+            <h2>About Me</h2>
+            <p>
+                Senior Salesforce Marketing Cloud Consultant with 8+ years of experience 
+                architecting high-volume CRM ecosystems, automation pipelines, and 
+                data-driven lifecycle frameworks.
+            </p>
+            <p>
+                I specialize in SQL segmentation engines, personalization logic, API integrations,
+                governance controls, and enterprise journey orchestration across global markets.
+            </p>
+        </div>
+    </div>
+</section>
+
+<section id="experience" class="fade-in">
+    <h2>Professional Experience</h2>
+    <div class="card">
+        <h3>Senior SFMC Technical Lead</h3>
+        <p>
+            Led multi-country CRM architecture managing 1M+ records. Built scalable 
+            segmentation frameworks, automated data refresh pipelines, optimized deliverability, 
+            and improved lifecycle performance metrics.
+        </p>
+    </div>
+</section>
+
+<section id="projects" class="fade-in">
+    <h2>Case Studies</h2>
+    <div class="grid">
+        <div class="card">
+            <h3>Customer Lifecycle Automation</h3>
+            <p>Full lifecycle architecture with VIP segmentation, abandoned cart recovery, and API sync.</p>
+            <a href="https://github.com/RuchikaSandolkar/ruchika-work-sfmc-lifecycle">View Technical Repo →</a>
+        </div>
+        <div class="card">
+            <h3>Engagement Scoring Engine</h3>
+            <p>Weighted behavioral scoring model improving lead qualification and targeting precision.</p>
+        </div>
+    </div>
+</section>
+
+<section id="skills" class="fade-in">
+    <h2>Core Technical Expertise</h2>
+    <div class="grid">
+        <div class="card">Advanced SQL & Data Modeling</div>
+        <div class="card">AMPscript & SSJS Personalization</div>
+        <div class="card">Automation Studio Pipelines</div>
+        <div class="card">Journey Builder Architecture</div>
+        <div class="card">REST API Integrations</div>
+        <div class="card">Data Governance Strategy</div>
+    </div>
+</section>
+
+<section class="fade-in">
+    <h2>Testimonials</h2>
+    <div class="card">
+        <p>"Ruchika transformed our fragmented marketing automation into a structured, scalable CRM system."</p>
+        <small>– Marketing Director, Enterprise Client</small>
+    </div>
+</section>
+
+<section id="contact" class="fade-in">
+    <h2>Contact</h2>
+    <div class="card">
+        <p>Email: ruchikasandolkar05@outlook.com</p>
+        <p>
+            <a href="https://www.linkedin.com/in/ruchika-sandolkar/-LINKEDIN/">LinkedIn</a> |
+            <a href="https://github.com/RuchikaSandolkar">GitHub</a>
+        </p>
+    </div>
+</section>
+
+<footer>
+    © 2026 Ruchika Sandolkar
+</footer>
+
+<script>
+    const faders = document.querySelectorAll('.fade-in');
+
+    const appearOptions = {
+        threshold: 0.2
+    };
+
+    const appearOnScroll = new IntersectionObserver(function(entries, observer) {
+        entries.forEach(entry => {
+            if (!entry.isIntersecting) {
+                return;
+            } else {
+                entry.target.classList.add('appear');
+                observer.unobserve(entry.target);
+            }
+        });
+    }, appearOptions);
+
+    faders.forEach(fader => {
+        appearOnScroll.observe(fader);
+    });
+</script>
+
+</body>
+</html>
