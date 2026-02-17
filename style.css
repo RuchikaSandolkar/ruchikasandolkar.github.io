@@ -20,6 +20,14 @@ nav {
     color: white;
     font-weight: 700;
 }
+section:nth-child(even) {
+    background-color: #ffffff;
+}
+
+section:nth-child(odd) {
+    background-color: #f3f4f6;
+}
+
 
 .nav-links a {
     color: white;
