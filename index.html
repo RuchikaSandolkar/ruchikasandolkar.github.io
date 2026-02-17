@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <title>Ruchika Sandolkar | Salesforce Marketing Cloud Architect</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="Enterprise Salesforce Marketing Cloud Architect specializing in lifecycle automation, CRM integration, AI-driven marketing systems and scalable data architecture.">
+<meta name="description" content="Enterprise Salesforce Marketing Cloud Architect specializing in lifecycle automation, CRM integration, and scalable data architecture.">
 
 <link rel="stylesheet" href="style.css">
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
@@ -29,14 +29,13 @@
         <h1>Enterprise Salesforce Marketing Cloud Architect</h1>
         <p>
             I design scalable CRM ecosystems, lifecycle automation frameworks,
-            AI-assisted marketing systems, and high-performance segmentation engines.
+            and high-performance segmentation engines.
         </p>
         <a class="btn" href="#contact">Contact Me for Resume</a>
     </div>
 </header>
 
 <!-- ABOUT -->
-
 <section id="about" class="fade-in">
     <h2>About Me</h2>
     <div class="card about-layout">
@@ -48,9 +47,9 @@
             </p>
 
             <p>
-                My core focus lies in architecting structured Contact Builder data models, 
+                My expertise lies in architecting structured Contact Builder data models, 
                 building advanced SQL segmentation engines, implementing automation governance, 
-                and integrating REST/SOAP APIs with external CRM systems.
+                and integrating REST/SOAP APIs with external systems.
             </p>
 
             <p>
@@ -62,32 +61,29 @@
 </section>
 
 <!-- EXPERIENCE -->
-
 <section id="experience" class="fade-in">
     <h2>Professional Experience</h2>
     <div class="card">
         <h3>Senior Salesforce Marketing Cloud Technical Lead</h3>
         <ul>
-            <li>Architected lifecycle automation systems managing 1M+ customer records</li>
+            <li>Architected lifecycle automation managing 1M+ customer records</li>
             <li>Designed VIP segmentation & engagement scoring frameworks</li>
-            <li>Implemented abandoned cart automation pipelines</li>
-            <li>Integrated SFMC with external CRM using REST & SOAP APIs</li>
-            <li>Reduced manual campaign operations by 40%</li>
+            <li>Built abandoned cart automation pipelines</li>
+            <li>Integrated SFMC with external CRM via REST & SOAP APIs</li>
+            <li>Reduced manual operations by 40%</li>
             <li>Improved cart recovery rate by 22%</li>
         </ul>
     </div>
 </section>
 
 <!-- PROJECTS -->
-
 <section id="projects" class="fade-in">
     <h2>Case Studies</h2>
     <div class="grid">
         <div class="card">
             <h3>Customer Lifecycle Automation Framework</h3>
             <p>
-                Designed structured lifecycle architecture including segmentation engine,
-                automation refresh cycles, journey orchestration and CRM synchronization.
+                Designed structured lifecycle architecture including segmentation, automation, and integration.
             </p>
             <a href="case-study-lifecycle.html">View Full Case Study →</a>
         </div>
@@ -95,19 +91,17 @@
         <div class="card">
             <h3>AI-Driven Engagement Optimization</h3>
             <p>
-                Implemented behavioral scoring models and predictive engagement strategies 
-                leveraging AI-driven data insights.
+                Built behavioral scoring and predictive engagement strategies using AI-driven logic.
             </p>
         </div>
     </div>
 </section>
 
 <!-- SKILLS -->
-
 <section id="skills" class="fade-in">
     <h2>Technical Skills</h2>
     <div class="grid">
-        <div class="card">Salesforce Marketing Cloud Expertise</div>
+        <div class="card">Salesforce Marketing Cloud</div>
         <div class="card">Contact Builder Architecture</div>
         <div class="card">Advanced SQL</div>
         <div class="card">AMPscript</div>
@@ -116,41 +110,34 @@
         <div class="card">SOAP API</div>
         <div class="card">HTML & CSS</div>
         <div class="card">Python</div>
-        <div class="card">Apex Programming/LWC</div>
-        <div class="card">Agile & Scrum Methodologies</div> 
-        <div class="card">Data Governance & Automation Strategy</div>
-        <div class="card">Business KPI Understanding</div>
-        <div class="card">JIRA/POSTMAN/Github</div>
+        <div class="card">Data Governance & Automation</div>
     </div>
 </section>
 
 <!-- CERTIFICATIONS -->
-
 <section id="certifications" class="fade-in">
     <h2>Certifications</h2>
     <div class="card">
         <ul>
-            <li>6x Salesforce & MuleSoft Certified</li>
+            <li>13x Salesforce & MuleSoft Certified</li>
             <li>IBM AI Engineer Certified</li>
             <li>Google Generative AI Certified</li>
-            <li>Salesforce Marketing Cloud Consultant & Email Specialist certified</li>
-            <li>Trailhead by Salesforce Graduate</li>
+            <li>Marketing Cloud Consultant & Developer</li>
         </ul>
     </div>
 </section>
 
 <!-- CONTACT -->
-
 <section id="contact" class="fade-in">
     <h2>Contact</h2>
     <div class="card">
-        <p><strong>Location:</strong> Frankfurt am Main, Germany</p>
+        <p><strong>Location:</strong> Frankfurt, Germany</p>
         <p><strong>Email:</strong> ruchikasandolkar05@outlook.com</p>
         <p>
             <a href="https://www.linkedin.com/in/ruchika-sandolkar">LinkedIn</a> |
             <a href="https://github.com/RuchikaSandolkar">GitHub</a>
         </p>
-        <p><strong>Resume:</strong> Available upon request.</p>
+        <p><strong>Resume:</strong> Available on request.</p>
     </div>
 </section>
 
@@ -161,14 +148,15 @@
 <script>
 const faders = document.querySelectorAll('.fade-in');
 const appearOptions = { threshold: 0.2 };
-const appearOnScroll = new IntersectionObserver(function(entries, observer) {
+const observer = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
-        if (!entry.isIntersecting) return;
-        entry.target.classList.add('appear');
-        observer.unobserve(entry.target);
+        if (entry.isIntersecting) {
+            entry.target.classList.add('appear');
+            observer.unobserve(entry.target);
+        }
     });
 }, appearOptions);
-faders.forEach(fader => { appearOnScroll.observe(fader); });
+faders.forEach(fader => observer.observe(fader));
 </script>
 
 </body>
